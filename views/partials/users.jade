@@ -1,0 +1,20 @@
+
+a.btn.btn-success(ng-href='#/user') New
+
+.alert.alert-info(ng-hide="items.length")
+    p No items found
+    
+div(ng-show="items.length")
+    table.table.table-striped
+      thead
+        tr
+          th Name
+          th Email
+          th(width='200px') Options
+      tbody
+        tr(ng-repeat="item in items")
+          td {{item.name}}
+          td {{item.email}}
+          td 
+            a.btn.btn-primary(ng-href='#/user/{{item._id}}') Edit
+            button.btn.btn-danger(ng-click='remove(item)') Remove

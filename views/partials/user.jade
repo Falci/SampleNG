@@ -1,0 +1,13 @@
+
+form.form-horizontal(ng-submit='save()')
+  .form-group
+    label.col-sm-2.control-label(for='name') Name
+    .col-sm-10
+      input#name.form-control(type='text', placeholder='Name', ng-model='user.name')
+  .form-group
+    label.col-sm-2.control-label(for='email') Email
+    .col-sm-10
+      input#email.form-control(type='email', placeholder='Email', ng-model='user.email')
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      button.btn.btn-default(type='submit') Save
